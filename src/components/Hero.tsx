@@ -29,7 +29,7 @@ export function Hero() {
       >
         {/* @ts-ignore */}
         <model-viewer
-          src="https://raw.githubusercontent.com/astoianov66-jpg/street-burger-/main/krabby_patty_burger.glb"
+          src="/krabby_patty_burger.glb"
           auto-rotate
           rotation-per-second="25deg"
           disable-zoom
