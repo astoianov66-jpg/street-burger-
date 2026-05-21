@@ -1,0 +1,31 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;700;800&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+:root {
+  --green: #4a9e57;
+  --green-bg: #4a9e5715;
+  --green-border: #4a9e5730;
+  --dark: #1a1a1a;
+  --card: #242424;
+  --text: #f0f0f0;
+  --muted: #aaaaaa;
+}
+html, body, #root {
+  min-height: 100%;
+}
+body {
+  background: var(--dark);
+  color: var(--text);
+  font-family: 'Nunito', sans-serif;
+}
+.font-display {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 2px;
+}
