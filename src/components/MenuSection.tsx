@@ -105,10 +105,6 @@ const categories: Category[] = [
   { name: 'Наливна бира "Бургаско"', price: '€1.54' },
 }]
 
-},
-];
-
-
 export function MenuSection() {
   const [active, setActive] = useState('sandwiches');
   const current = categories.find((c) => c.id === active)!;
