@@ -1,107 +1,70 @@
 import React, { useState } from 'react';
+
 type MenuItem = {
   name: string;
   price: string;
 };
+
 type Category = {
   id: string;
   label: string;
   emoji: string;
   items: MenuItem[];
 };
+
 const categories: Category[] = [
 {
   id: 'sandwiches',
   label: 'Сандвичи',
   emoji: '🍔',
   items: [
-  {
-    name: 'Телешки бургер',
-    price: '€6.00'
-  },
-  {
-    name: 'Свински бургер',
-    price: '€6.00'
-  },
-  {
-    name: 'Хотдог с кренвирш',
-    price: '€2.60'
-  },
-  {
-    name: 'Хотдог с кебапче',
-    price: '€2.60'
-  }]
+  { name: 'Телешки бургер', price: '€6.00' },
+  { name: 'Свински бургер', price: '€6.00' },
+  { name: 'Хотдог с кренвирш', price: '€2.60' },
+  { name: 'Хотдог с кебапче', price: '€2.60' }]
 
 },
 {
- {
   id: 'skara',
   label: 'Скара',
   emoji: '🔥',
   items: [
-    { name: 'Кюфте', price: '€1.00' },
-    { name: 'Кебапче', price: '€1.00' },
-    { name: 'Свинска пържола', price: '€3.60' },
-    { name: 'Свинска наденица', price: '€2.60' },
-    { name: 'Свинска кълцаница', price: '€2.60' },
-    { name: 'Пилешко шишче', price: '€2.60' },
-    { name: 'Пилешка пържола', price: '€3.60' },
-    { name: 'Пилешка плескавица', price: '€3.00' },
-    { name: 'Телешки суджук', price: '€3.50' },
-    { name: 'Телешка плескавица', price: '€3.00' },
-    { name: 'Свинско шишче', price: '€2.60' },
-    { name: 'Свински суджук', price: '€3.50' },
-    { name: 'Свинска плескавица', price: '€2.00' },
-    { name: 'Карначе', price: '€2.00' },
-    { name: 'Кълцано карначе', price: '€1.50' },
-    { name: 'Меча лапа', price: '€3.50' },
-    { name: 'Татарско кюфте', price: '€3.00' },
-    { name: 'Пържени картофи', price: '€2.60' },
-    { name: 'Пържени картофи със сирене', price: '€3.00' },
-    { name: 'Пържени картофи (гарнитура)', price: '€1.50' },
-  ],
+  { name: 'Кюфте', price: '€1.00' },
+  { name: 'Кебапче', price: '€1.00' },
+  { name: 'Свинска пържола', price: '€3.60' },
+  { name: 'Свинска наденица', price: '€2.60' },
+  { name: 'Свинска кълцаница', price: '€2.60' },
+  { name: 'Пилешко шишче', price: '€2.60' },
+  { name: 'Пилешка пържола', price: '€3.60' },
+  { name: 'Пилешка плескавица', price: '€3.00' },
+  { name: 'Телешки суджук', price: '€3.50' },
+  { name: 'Телешка плескавица', price: '€3.00' },
+  { name: 'Свинско шишче', price: '€2.60' },
+  { name: 'Свински суджук', price: '€3.50' },
+  { name: 'Свинска плескавица', price: '€2.00' },
+  { name: 'Карначе', price: '€2.00' },
+  { name: 'Кълцано карначе', price: '€1.50' },
+  { name: 'Меча лапа', price: '€3.50' },
+  { name: 'Татарско кюфте', price: '€3.00' },
+  { name: 'Пържени картофи', price: '€2.60' },
+  { name: 'Пържени картофи със сирене', price: '€3.00' },
+  { name: 'Пържени картофи (гарнитура)', price: '€1.50' }]
+
 },
 {
   id: 'salati',
   label: 'Салати',
   emoji: '🥗',
   items: [
-  {
-    name: 'Шопска салата',
-    price: '€2.00'
-  },
-  {
-    name: 'Зелева салата',
-    price: '€1.50'
-  },
-  {
-    name: 'Салата Снежанка',
-    price: '€2.05'
-  },
-  {
-    name: 'Картофена салата',
-    price: '€2.05'
-  },
-  {
-    name: 'Боб с лютеница',
-    price: '€2.05'
-  },
-  {
-    name: 'Таратор',
-    price: '€2.00'
-  },
-  {
-    name: 'Печени чушки',
-    price: '€0.50'
-  },
-  {
-    name: 'Люти чушки',
-    price: '€0.25'
-  },
-  {
-    name: 'Гарнитура',
-    price: '€1.50'
-  }]
+  { name: 'Шопска салата', price: '€2.00' },
+  { name: 'Зелева салата', price: '€1.50' },
+  { name: 'Салата Снежанка', price: '€2.05' },
+  { name: 'Картофена салата', price: '€2.05' },
+  { name: 'Боб с лютеница', price: '€2.05' },
+  { name: 'Таратор', price: '€2.00' },
+  { name: 'Печени чушки', price: '€0.50' },
+  { name: 'Люти чушки', price: '€0.25' },
+  { name: 'Гарнитура', price: '€1.50' }]
 
 },
 {
@@ -109,14 +72,8 @@ const categories: Category[] = [
   label: 'Хляб',
   emoji: '🍞',
   items: [
-  {
-    name: 'Питка',
-    price: '€0.50'
-  },
-  {
-    name: 'Филия',
-    price: '€0.10'
-  }]
+  { name: 'Питка', price: '€0.50' },
+  { name: 'Филия', price: '€0.10' }]
 
 },
 {
@@ -124,18 +81,9 @@ const categories: Category[] = [
   label: 'Десерти',
   emoji: '🍩',
   items: [
-  {
-    name: 'Донат с шоколадов пълнеж',
-    price: '€1.50'
-  },
-  {
-    name: 'Донат с баварски крем',
-    price: '€1.50'
-  },
-  {
-    name: 'Мъфин червено кадифе',
-    price: '€2.00'
-  }]
+  { name: 'Донат с шоколадов пълнеж', price: '€1.50' },
+  { name: 'Донат с баварски крем', price: '€1.50' },
+  { name: 'Мъфин червено кадифе', price: '€2.00' }]
 
 },
 {
@@ -143,18 +91,9 @@ const categories: Category[] = [
   label: 'Топли напитки',
   emoji: '☕',
   items: [
-  {
-    name: 'Кафе',
-    price: '€0.80'
-  },
-  {
-    name: 'Кафе 3в1',
-    price: '€0.80'
-  },
-  {
-    name: 'Чай',
-    price: '€0.80'
-  }]
+  { name: 'Кафе', price: '€0.80' },
+  { name: 'Кафе 3в1', price: '€0.80' },
+  { name: 'Чай', price: '€0.80' }]
 
 },
 {
@@ -162,75 +101,56 @@ const categories: Category[] = [
   label: 'Бира',
   emoji: '🍺',
   items: [
-  {
-    name: 'Наливна бира "Бургаско"',
-    price: '€1.54'
-  },
-  {
-    name: 'Бургаско кен 500мл.',
-    price: '€1.28'
-  },
-  {
-    name: 'Бургаско кен 330мл.',
-    price: '€1.02'
-  },
-  {
-    name: 'Stella Artois кен',
-    price: '€1.43'
-  },
-  {
-    name: 'Stella Artois 330мл.',
-    price: '€1.79'
-  },
-  {
-    name: 'Stella Artois 0,0%',
-    price: '€1.53'
-  },
-  {
-    name: 'Stella Artois 0,0% кен',
-    price: '€1.53'
-  },
-  {
-    name: 'Corona 355мл.',
-    price: '€2.05'
-  },
-  {
-    name: 'Madri кен',
-    price: '€1.28'
-  },
-  {
-    name: 'Staropramen кен',
-    price: '€1.43'
-  },
-  {
-    name: 'Staropramen 0,0%',
-    price: '€1.53'
-  },
-  {
-    name: "Beck's кен",
-    price: '€1.43'
-  },
-  {
-    name: 'Каменица кен',
-    price: '€1.02'
-  },
-  {
-    name: 'Каменица 0,0%',
-    price: '€1.02'
-  },
-  {
-    name: 'Somersby',
-    price: '€1.53'
-  }]
+  { name: 'Наливна бира "Бургаско"', price: '€1.54' },
+  { name: 'Бургаско кен 500мл.', price: '€1.28' },
+  { name: 'Бургаско кен 330мл.', price: '€1.02' },
+  { name: 'Stella Artois кен', price: '€1.43' },
+  { name: 'Stella Artois 330мл.', price: '€1.79' },
+  { name: 'Stella Artois 0,0%', price: '€1.53' },
+  { name: 'Stella Artois 0,0% кен', price: '€1.53' },
+  { name: 'Corona 355мл.', price: '€2.05' },
+  { name: 'Madri кен', price: '€1.28' },
+  { name: 'Staropramen кен', price: '€1.43' },
+  { name: 'Staropramen 0,0%', price: '€1.53' },
+  { name: "Beck's кен", price: '€1.43' },
+  { name: 'Каменица кен', price: '€1.02' },
+  { name: 'Каменица 0,0%', price: '€1.02' },
+  { name: 'Somersby', price: '€1.53' }]
+
+},
+{
+  id: 'bezalk',
+  label: 'Безалкохолни',
+  emoji: '🥤',
+  items: [
+  { name: 'Вода 0,5л.', price: '0.51лв.' },
+  { name: 'Вода 1,5л.', price: '1.02лв.' },
+  { name: 'Газирана вода 0,5л.', price: '0.77лв.' },
+  { name: 'Газирана вода 1,5л.', price: '1.28лв.' },
+  { name: 'Вода с минерали', price: '1.02лв.' },
+  { name: 'Кола 0,5л.', price: '1.28лв.' },
+  { name: 'Кола кен', price: '1.28лв.' },
+  { name: 'Кола без захар 0,5л.', price: '1.28лв.' },
+  { name: 'Фанта 0,5л.', price: '1.28лв.' },
+  { name: 'Фанта кен', price: '1.28лв.' },
+  { name: 'Sprite', price: '1.28лв.' },
+  { name: 'Schweppes', price: '1.28лв.' },
+  { name: 'Студен чай Fuzetea', price: '1.28лв.' },
+  { name: 'Hack 0,5л.', price: '1.79лв.' },
+  { name: 'Hack 0,33л.', price: '1.53лв.' },
+  { name: 'Hell', price: '0.92лв.' },
+  { name: 'Redbull', price: '1.79лв.' },
+  { name: 'Maxr', price: '1.02лв.' }]
 
 }];
+
 
 export function MenuSection() {
   const [active, setActive] = useState('sandwiches');
   const current = categories.find((c) => c.id === active)!;
+
   return (
     <section id="menu" className="px-5 sm:px-8 py-10 max-w-[600px] mx-auto">
-      {/* Header */}
       <div className="text-center mb-8">
         <div className="inline-block bg-brand-green/10 text-brand-green border border-brand-green/30 text-[11px] font-extrabold tracking-[1px] uppercase px-3 py-1 rounded-full mb-3">
           🍽️ Нашето меню
@@ -240,13 +160,16 @@ export function MenuSection() {
         </h2>
       </div>
 
-      {/* Category tabs — horizontally scrollable */}
       <div className="flex gap-2 overflow-x-auto pb-2 mb-6 scrollbar-hide">
         {categories.map((cat) =>
         <button
           key={cat.id}
           onClick={() => setActive(cat.id)}
-          className={`flex-shrink-0 flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-extrabold uppercase tracking-[0.5px] transition-all border ${active === cat.id ? 'bg-brand-green text-white border-brand-green' : 'bg-brand-card text-brand-muted border-brand-green/20 hover:border-brand-green/50'}`}>
+          className={`flex-shrink-0 flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-extrabold uppercase tracking-[0.5px] transition-all border ${
+          active === cat.id ?
+          'bg-brand-green text-white border-brand-green' :
+          'bg-brand-card text-brand-muted border-brand-green/20 hover:border-brand-green/50'}`
+          }>
           
             <span>{cat.emoji}</span>
             <span>{cat.label}</span>
@@ -254,7 +177,6 @@ export function MenuSection() {
         )}
       </div>
 
-      {/* Menu items */}
       <div className="bg-brand-card border border-brand-green/20 rounded-2xl overflow-hidden">
         <div className="px-4 py-3 border-b border-brand-green/20 flex items-center gap-2">
           <span className="text-xl">{current.emoji}</span>
