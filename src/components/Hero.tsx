@@ -20,7 +20,7 @@ export function Hero() {
           transform: 'translate(-50%, -50%)',
           width: 'clamp(280px, 70vw, 500px)',
           height: 'clamp(280px, 70vw, 500px)',
-          opacity: 0.50,
+          opacity: 0.45,
           pointerEvents: 'none',
           zIndex: 0,
           borderRadius: '50%',
