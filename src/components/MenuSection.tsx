@@ -37,6 +37,8 @@ const categories: Category[] = [
   { name: 'Пилешко шишче', price: '€2.60' },
   { name: 'Пилешка пържола', price: '€3.60' },
   { name: 'Пилешка плескавица', price: '€3.00' },
+  { name: 'Меча лапа', price: '€3.50' }, 
+  { name: 'Татарско кюфте', price: '€3.00' },
   { name: 'Телешки суджук', price: '€3.50' },
   { name: 'Телешка плескавица', price: '€3.00' },
   { name: 'Свинско шишче', price: '€2.60' },
@@ -44,7 +46,6 @@ const categories: Category[] = [
   { name: 'Свинска плескавица', price: '€2.00' },
   { name: 'Карначе', price: '€2.00' },
   { name: 'Кълцано карначе', price: '€1.50' },
-  { name: 'Меча лапа', price: '€3.50' },
   { name: 'Татарско кюфте', price: '€3.00' },
   { name: 'Пържени картофи', price: '€2.60' },
   { name: 'Пържени картофи със сирене', price: '€3.00' },
@@ -58,9 +59,9 @@ const categories: Category[] = [
   items: [
   { name: 'Шопска салата', price: '€2.00' },
   { name: 'Зелева салата', price: '€1.50' },
-  { name: 'Салата Снежанка', price: '€2.05' },
-  { name: 'Картофена салата', price: '€2.05' },
-  { name: 'Боб с лютеница', price: '€2.05' },
+  { name: 'Салата Снежанка', price: '€1.50' },
+  { name: 'Картофена салата', price: '€1.50' },
+  { name: 'Боб с лютеница', price: '€1.50' },
   { name: 'Таратор', price: '€2.00' },
   { name: 'Печени чушки', price: '€0.50' },
   { name: 'Люти чушки', price: '€0.25' },
@@ -102,47 +103,10 @@ const categories: Category[] = [
   emoji: '🍺',
   items: [
   { name: 'Наливна бира "Бургаско"', price: '€1.54' },
-  { name: 'Бургаско кен 500мл.', price: '€1.28' },
-  { name: 'Бургаско кен 330мл.', price: '€1.02' },
-  { name: 'Stella Artois кен', price: '€1.43' },
-  { name: 'Stella Artois 330мл.', price: '€1.79' },
-  { name: 'Stella Artois 0,0%', price: '€1.53' },
-  { name: 'Stella Artois 0,0% кен', price: '€1.53' },
-  { name: 'Corona 355мл.', price: '€2.05' },
-  { name: 'Madri кен', price: '€1.28' },
-  { name: 'Staropramen кен', price: '€1.43' },
-  { name: 'Staropramen 0,0%', price: '€1.53' },
-  { name: "Beck's кен", price: '€1.43' },
-  { name: 'Каменица кен', price: '€1.02' },
-  { name: 'Каменица 0,0%', price: '€1.02' },
-  { name: 'Somersby', price: '€1.53' }]
+}]
 
 },
-{
-  id: 'bezalk',
-  label: 'Безалкохолни',
-  emoji: '🥤',
-  items: [
-  { name: 'Вода 0,5л.', price: '0.51лв.' },
-  { name: 'Вода 1,5л.', price: '1.02лв.' },
-  { name: 'Газирана вода 0,5л.', price: '0.77лв.' },
-  { name: 'Газирана вода 1,5л.', price: '1.28лв.' },
-  { name: 'Вода с минерали', price: '1.02лв.' },
-  { name: 'Кола 0,5л.', price: '1.28лв.' },
-  { name: 'Кола кен', price: '1.28лв.' },
-  { name: 'Кола без захар 0,5л.', price: '1.28лв.' },
-  { name: 'Фанта 0,5л.', price: '1.28лв.' },
-  { name: 'Фанта кен', price: '1.28лв.' },
-  { name: 'Sprite', price: '1.28лв.' },
-  { name: 'Schweppes', price: '1.28лв.' },
-  { name: 'Студен чай Fuzetea', price: '1.28лв.' },
-  { name: 'Hack 0,5л.', price: '1.79лв.' },
-  { name: 'Hack 0,33л.', price: '1.53лв.' },
-  { name: 'Hell', price: '0.92лв.' },
-  { name: 'Redbull', price: '1.79лв.' },
-  { name: 'Maxr', price: '1.02лв.' }]
-
-}];
+];
 
 
 export function MenuSection() {
