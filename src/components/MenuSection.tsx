@@ -44,7 +44,7 @@ const categories: Category[] = [
   },
   {
     id: 'salati',
-    label: 'Салати',
+    label: 'Салати      200гр',
     emoji: '🥗',
     items: [
       { name: 'Шопска салата', price: '€2.00' },
